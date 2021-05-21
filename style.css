@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,700,900|Lato:300,400,700&display=swap');
+:root {
+    --primaryViolet: #5e42a6;
+    --navColor: #312450;
+    --firstBg: #5052b5;
+    --secondBg: #4c4eac;
+    --thirdBg: #484aa3;
+    --fourthBg: #b74e91;
+    --fifthBg: #5e42a6;
+    --footerBg: #493382;
+    --white: #fff;
+    --border: #765eb3;
+    --lightGray: rgba(211, 211, 211,.7);
+    --borderLightGray: rgba(211, 211, 211,.3);
+    --transition:.4s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Barlow', sans-serif;
+}
+
+button {
+    text-transform: uppercase;
+    padding: 20px 45px;
+    letter-spacing: 2px;
+    background-color: transparent;
+    border: 2px solid var(--border);
+    color: var(--white);
+    border-radius: 30px;
+}
+
+button:hover {
+    background-color: rgba(255,255,255,.4);
+    transition: var(--transition);
+    cursor: pointer;
+    border: 2px solid rgba(255,255,255,.4);
+}
+
+
+
+/***************
+Navigation
+***************/
+nav {
+    background-color: var(--navColor);
+    flex: 1;
+    height: 100vh;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+nav img {
+    width: 90%;
+    height: auto;
+    padding: 0 10px 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0 50px 0 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .9rem;
+    display: block;
+    border-bottom: 2px solid var(--fifthBg);
+    margin-bottom: 35px;
+}
+
+nav ul li a:hover {
+    color: var(--lightGray);
+    transition: var(--transition);
+    text-decoration: none;
+    border-bottom: 1px solid var(--navColor);
+}
+
+nav ul li.icons {
+    border: none;
+}
+
+nav ul li.icons a {
+    font-size: 1.7rem;
+    margin-left: 10px;
+    display: inline-block;
+    border-bottom: none;
+}
+
+nav ul li.icons a:hover {
+    color: var(--fourthBg);
+    transition: var(--transition);
+}
+
+/****************
+Main
+****************/
+main {
+    flex: 3;
+    height: 100vh;
+    overflow: scroll;
+}
+
+/****************
+Header
+****************/
+header {
+    background-image:linear-gradient(rgba(94,66,166,.9),rgba(94,66,166,.9)),url(img/circle.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
+header h1 {
+    color: var(--white);
+    font-size: 4rem;
+    padding-bottom: 25px;
+}
+
+header p {
+    font-size: 1.3rem;
+    line-height: 1.9;
+    color: var(--lightGray);
+    padding-bottom: 28px;
+}
+
+/****************
+webDev,mobDev,intMarketing
+****************/
+.webDev,
+.mobDev,
+.intMarketing {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+}
+
+.img {
+    flex: 1;
+}
+
+.text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.text h2 {
+    color: var(--white);
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+.text p {
+    color: var(--lightGray);
+    padding-bottom: 20px;
+}
+
+.webDev .img {
+    background-image: url(img/services1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
+.webDev .text {
+    background-color: var(--firstBg);
+}
+
+.mobDev .img {
+    background-image: url(img/services2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
+.mobDev .text {
+    background-color: var(--secondBg);
+}
+
+.intMarketing .img {
+    background-image: url(img/services3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
+.intMarketing .text {
+    background-color: var(--thirdBg);
+}
+
+/*************
+What we do
+**************/
+
+.whatWeDo {
+    background-color: var(--fourthBg);
+    padding: 50px;
+}
+
+.whatWeDo h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+}
+
+.whatWeDo article h2 + p {
+    color: var(--lightGray);
+    font-size: 1.2rem;
+    padding-right: 100px;
+    padding-bottom: 15px;
+}
+
+.whatWeDo .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid var(--lightGray);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.whatWeDo .row .col {
+    flex: 0 0 50%;
+    border: 1px solid var(--lightGray);
+    background-color: rgba(255,255,255,.2);
+    position: relative;
+}
+
+.whatWeDo .row .col h4 {
+    color: var(--white);
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+.whatWeDo .row .col p {
+    font-size: 1.1rem;
+    color: black;
+}
+
+.whatWeDo .row .col .text {
+    padding: 80px 50px 20px 90px;
+}
+
+.whatWeDo .row .col .text::before {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--white);
+    color: var(--fourthBg);
+    position: absolute;
+    left: 10px;
+    top: 90px;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.whatWeDo .row .col:first-child .text::before {
+    font-family: "Font Awesome 5 Brands";
+    display: inline-block;
+    content: "\f13b";
+}
+
+.whatWeDo .row .col:nth-child(2) .text::before {
+    font-family: "Font Awesome 5 Brands";
+    display: inline-block;
+    content: "\f3b9";
+}
+
+.whatWeDo .row .col:nth-child(3) .text::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f457";
+    display: inline-block;
+}
+
+.whatWeDo .row .col:last-child .text::before {
+    font-family: "Font Awesome 5 Brands";
+    display: inline-block;
+    content: "\f19a";
+}
+
+.whatWeDo button {
+    border: 2px solid rgba(255,255,255,.2);
+}
+
+/*************
+Form
+**************/
+.form {
+    padding: 50px;
+    background-color: var(--footerBg);
+}
+
+.form article:first-child h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+}
+
+.form article:first-child p {
+    color: var(--lightGray);
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+}
+
+.form article:last-child {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form article:last-child .colLeft {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.form article:last-child .colRight {
+    flex: 1;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid rgba(255,255,255,.2);
+    line-height: 2.5;
+}
+
+.form article:last-child .colRight h4 {
+    color: var(--white);
+    font-size: 1.3rem;
+}
+
+.form article:last-child .colRight p {
+    color: var(--lightGray);
+    font-size: 1.1rem;
+}
+
+.form article:last-child form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form article:last-child form input,
+.form article:last-child form textarea {
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgba(255,255,255,.2);
+    border: none;
+    margin-bottom: 20px;
+}
+
+.form article:last-child form input {
+    flex: 0 0 48%;
+}
+
+.form article:last-child form textarea {
+    flex: 0 0 100%;
+}
+
+/*************
+Footer
+**************/
+footer {
+    background-color: var(--fifthBg);
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    color: var(--lightGray);
+    font-size: 1.1rem;
+}
+
+/*************
+Responsive
+**************/
+@media(max-width:768px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav img {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        text-align: center;
+        padding: 50px 20px 0 20px;
+    }
+
+    nav ul li a {
+        color: var(--white);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: .9rem;
+        display: block;
+        border-bottom: 2px solid var(--fifthBg);
+        margin-bottom: 35px;
+    }
+    
+    main {
+        flex: 1;
+        overflow: auto;
+    }
+    
+    header {
+        height: 70vh;
+        padding-left: 30px;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    header p {
+        padding-right: 100px;
+    }
+    
+    .webDev,
+    .mobDev,
+    .intMarketing {
+        flex-direction: column;
+        height: 70vh;
+    }
+    
+    .text {
+        flex: 1;
+        padding: 0 110px 0 30px;
+    }
+    
+    .whatWeDo {
+        padding: 50px 30px 50px 30px;
+    }
+    
+    .whatWeDo article h2 + p {
+        padding-right: 10px;
+    }
+
+    
+    .whatWeDo .row {
+        flex-direction: column;
+    }
+
+    .whatWeDo .row .col {
+        flex: 0 0 100%;
+    }
+    
+    .form {
+        padding: 50px 10px 50px 25px;
+    }
+    
+    .form article:last-child {
+        flex-direction: column;
+    }
+    
+    .form article:last-child form input {
+        flex: 0 0 100%;
+    }
+    
+}
+
+
